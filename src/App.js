@@ -13,6 +13,9 @@ function App() {
   
   return (
     <div className="App">
+      <div className = "header">
+        Musings on the Journey to Software Engineer
+      </div>
       <Router>
       <Blog />
   

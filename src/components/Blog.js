@@ -79,7 +79,7 @@ return (
        
       ))}
     </div>
-    <div className="grid-item-4">
+    <div className="grid-item-4 reg" >
       
       {blogs.map(blog => (
         <div className = "regBlogList">
@@ -89,12 +89,7 @@ return (
           </div>
           <div className = "regEntry">{blog.entry.slice(0,200)}</div>
         </div>
-        // <BlogDetail 
-        //   id = {blog.id}
-        //   title = {blog.title}
-        //   entry = {blog.entry}
-        //   date = {blog.createdAt}
-        // />
+       
       ))}
     </div>
   </div>

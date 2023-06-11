@@ -33,9 +33,15 @@
     transform: rotate(360deg);
   }
 } */
-
+.header{
+  font-size:4rem;
+  background-color:black;
+  color:white;
+  padding:20px;
+}
 /* Blog start */
 .container{
+  
   display:grid;
   grid-template-areas:
   'feature feature feature side-bar'
@@ -45,19 +51,19 @@
 }
 .grid-item-1{
   grid-area:feature;
-  background-color:green;
+  /* background-color:green; */
 }
 .grid-item-2{
   grid-area:side-bar;
-  background-color:purple;
+  /* background-color:purple; */
 }
 .grid-item-3{
   grid-area:mini-features;
-  background-color:yellow;
+  /* background-color:yellow; */
 }
 .grid-item-4{
   grid-area:main;
-  background-color:aqua;
+  /* background-color:aqua; */
 }
 
 .featureContainer{
@@ -68,7 +74,8 @@
   
   display:flex;
   flex-direction:horizontal;
-  justify-content: center;
+  justify-content: space-between;
+  padding:20px;
 }
 
 .miniFeat{
@@ -81,11 +88,16 @@
 
 .miniImg{
   width:100%;
+  border-radius:5px;
 }
-
+.reg{
+  padding:20px;
+}
 .regBlogList{
   border: black 3px solid;
   margin:5px;
+  border-radius:5px;
+  
 }
 
 /* Blog stop */
@@ -95,13 +107,16 @@
 .featBlogContainer{
   display:flex;
   flex-direction:horizontal;
+  align-items:center;
+  padding:20px;
   
 }
 .featBlogPicBox{
-  width:60%;
+  width:80%;
   margin:10px;
 }
 .featPic{
   width:100%;
+  border-radius:5px;
 }
 /* Feature Blog stop */
