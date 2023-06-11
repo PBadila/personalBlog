@@ -10,6 +10,8 @@ import mini1 from '../imgs/mini1.png'
 import mini2 from '../imgs/mini2.png'
 import mini3 from '../imgs/mini3.png'
 import mePic2 from '../imgs/mePic2.png'
+import link from '../imgs/linkedIn.png'
+import envelope from '../imgs/envelope.png'
 
 const Blog = () => {
     const [ showHideBlog, setShowHideBlog ] = useState(true)
@@ -77,8 +79,15 @@ return (
       <div className="aboutMePicBox">
         <img className="aboutPic" src={mePic2} />
       </div>
-      <div>This is the about me</div>
-      <div>This will be the social media links</div>
+      <div className="aboutStuff">Hi! I am Pita - Mom, Herbalist, Urban Agriculturist, Kemetic Yoga Basu, Chemist, and now, Junior Software Engineer. </div>
+      <div className="aboutStuff">I'm a magical Pisces. I love purple. Prince is my muse.</div>
+      <div className="linkBox">
+        <a href="linkedin.com/in/pita-badila" target=""><img className="linkImg" src = {link}/></a>
+      </div>
+      <div className="linkBox">
+        <img className="linkImg" src = {envelope} />
+        <p>pitabadila@gmail.com</p>
+      </div>
     </div>
     <div className="grid-item-3 miniSec">
       {/* 3 highlight blogs go here */}
