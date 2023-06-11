@@ -178,8 +178,6 @@ border-radius:50%;
   position:relative;
   bottom:35px;
   left:15%;
-  
-  
 }
 /* Blog stop */
 
@@ -247,3 +245,91 @@ font-size:1.5rem;
   width:20%;
 }
 /* Blog Detail stop */
+
+/* Media Queries */
+@media(max-width: 1399px){
+  .featLink{
+    position:relative;
+    bottom:10px;
+    left:15%;
+  }
+  .featBlogPicBox{
+    width:60%;
+    margin:10px;
+  }
+  .featPic{
+    width:100%;
+    border-radius:5px;
+  }
+  .featBlogPrev{
+    width:60%;
+  }
+}
+@media(max-width: 800px){
+  .container{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+  }
+
+  .aboutMePicBox{
+    width:40%;
+    margin-top:20px;
+    margin-bottom:0;
+  }
+  .aboutPic{
+  width:70%;
+  border-radius:50%;
+  
+  }
+  .linkBox{
+    width:30%;
+    margin-top:5px;;
+  
+  }
+  .linkImg{
+    width:30%;
+  }
+  .grid-item-2{
+    width:90%;
+  }
+  .aboutStuff{
+    padding-left:50px;
+    padding-right:50px;
+    padding-bottom:2px;
+    padding-top:2px;
+  }
+  .headerPic{
+    display:none;
+  }
+  .featBlogContainer{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding-top:20px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-bottom:0px;
+    
+  }
+  .featBlogPicBox{
+    width:100%;
+  }
+  .featBlogPrev{
+    width:90%;
+  }
+  .miniSec{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+  }
+  .miniFeat{
+    width:100%;
+  }
+  .exitDetail{
+    width:15%;
+  }
+}

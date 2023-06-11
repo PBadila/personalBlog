@@ -86,8 +86,8 @@ return (
       </div>
       <div className="linkBox">
         <img className="linkImg" src = {envelope} />
-        <p>pitabadila@gmail.com</p>
       </div>
+      <div><p>pitabadila@gmail.com</p></div>
     </div>
     <div className="grid-item-3 miniSec">
       {/* 3 highlight blogs go here */}
