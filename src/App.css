@@ -2,16 +2,13 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
+
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;
@@ -28,11 +25,83 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+} */
+
+/* Blog start */
+.container{
+  display:grid;
+  grid-template-areas:
+  'feature feature feature side-bar'
+  'mini-features mini-features mini-features side-bar'
+  'main main main side-bar'
+  'main main main side-bar';
 }
+.grid-item-1{
+  grid-area:feature;
+  background-color:green;
+}
+.grid-item-2{
+  grid-area:side-bar;
+  background-color:purple;
+}
+.grid-item-3{
+  grid-area:mini-features;
+  background-color:yellow;
+}
+.grid-item-4{
+  grid-area:main;
+  background-color:aqua;
+}
+
+.featureContainer{
+  white-space:pre-line;
+}
+
+.miniSec{
+  
+  display:flex;
+  flex-direction:horizontal;
+  justify-content: center;
+}
+
+.miniFeat{
+  width:30%;
+ margin:10px;
+}
+.miniFeatPicBox{
+  width:100%;
+}
+
+.miniImg{
+  width:100%;
+}
+
+.regBlogList{
+  border: black 3px solid;
+  margin:5px;
+}
+
+/* Blog stop */
+
+
+/* Feature Blog start */
+.featBlogContainer{
+  display:flex;
+  flex-direction:horizontal;
+  
+}
+.featBlogPicBox{
+  width:60%;
+  margin:10px;
+}
+.featPic{
+  width:100%;
+}
+/* Feature Blog stop */
