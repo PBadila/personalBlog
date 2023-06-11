@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 
@@ -48,7 +49,10 @@ console.log(miniFeatBlog)
       break
   }
  }  
- 
+ //Conditional rendering
+ if (blogs.length ===0 ){
+  return <div>Loading...</div>
+ }
  
 return (
   <div className="container">
@@ -76,6 +80,7 @@ return (
       ))}
     </div>
     <div className="grid-item-4">
+      
       {blogs.map(blog => (
         <div className = "regBlogList">
           <div className = "regTitleBox">
