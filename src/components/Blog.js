@@ -82,7 +82,7 @@ return (
       <div className="aboutStuff">Hi! I am Pita - Mom, Herbalist, Urban Agriculturist, Kemetic Yoga Basu, Chemist, and now, Junior Software Engineer. </div>
       <div className="aboutStuff">I'm a magical Pisces. I love purple. Prince is my muse.</div>
       <div className="linkBox">
-        <a href="https://linkedin.com/in/pita-badila" target=""><img className="linkImg" src = {link}/></a>
+        <a href="https://linkedin.com/in/pita-badila" target="_blank"><img className="linkImg" src = {link}/></a>
       </div>
       <div className="linkBox">
         <img className="linkImg" src = {envelope} />
