@@ -9,6 +9,7 @@ import FeaturedBlog from './FeaturedBlog'
 import mini1 from '../imgs/mini1.png'
 import mini2 from '../imgs/mini2.png'
 import mini3 from '../imgs/mini3.png'
+import mePic2 from '../imgs/mePic2.png'
 
 const Blog = () => {
 
@@ -61,7 +62,9 @@ return (
     </div>
     <div className="grid-item-2">
       {/* this will be the side bar */}
-      <div>This will be the cartoon img</div>
+      <div className="aboutMePicBox">
+        <img className="aboutPic" src={mePic2} />
+      </div>
       <div>This is the about me</div>
       <div>This will be the social media links</div>
     </div>

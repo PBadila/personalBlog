@@ -33,12 +33,48 @@
     transform: rotate(360deg);
   }
 } */
+
+/* Header start */
 .header{
   font-size:4rem;
   background-color:black;
   color:white;
-  padding:20px;
+  padding:0px;
+  display:flex;
+  flex-direction:horizontal;
+  justify-content: space-between;
+  align-items: center;
+  /* border-radius:5px;
+  
+  margin-left:20px;
+  margin-right:20px; */
+  margin-bottom:20px;
+  font-family: 'Neucha', cursive;
 }
+.headerPic{
+  width:20%;
+}
+.headerPic1{
+  width:40%;
+}
+.headerPic2{
+  width:40%;
+  
+}
+.musings{
+  color:#a089e4;
+}
+
+.se{
+  color:#7befe5;
+}
+
+.journey{
+  color:#fd6085;
+}
+
+/* Header stop */
+
 /* Blog start */
 .container{
   
@@ -66,6 +102,10 @@
   /* background-color:aqua; */
 }
 
+/* .grid-item-2{
+  border-left:black solid 15px;
+} */
+
 .featureContainer{
   white-space:pre-line;
 }
@@ -76,6 +116,9 @@
   flex-direction:horizontal;
   justify-content: space-between;
   padding:20px;
+  /* border: #7befe5 solid 15px;
+  border-radius:5px;
+  margin:5px; */
 }
 
 .miniFeat{
@@ -100,6 +143,13 @@
   
 }
 
+.aboutMePicBox{
+  width:100%;
+}
+.aboutPic{
+width:50%;
+border-radius:50%;
+}
 /* Blog stop */
 
 
@@ -109,6 +159,9 @@
   flex-direction:horizontal;
   align-items:center;
   padding:20px;
+  /* border: #fd6085 solid 15px;
+  border-radius:5px;
+  margin:5px; */
   
 }
 .featBlogPicBox{
