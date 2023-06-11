@@ -26,7 +26,7 @@ function App() {
         </div>
       </div>
       <Router>
-      <Blog />
+      {/* <Blog /> */}
   
       {/* <EnterBlog />  */}
       <Routes>
@@ -34,6 +34,7 @@ function App() {
         <Route path = '/blogDetail' element = {<BlogDetail />} />
         <Route path = '/enterBlog' element = {<EnterBlog />} />
       </Routes> 
+      <Blog />
       </Router>
     </div>
   );

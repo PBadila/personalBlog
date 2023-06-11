@@ -16,7 +16,7 @@ const FeaturedBlog = ( { bloginfo }) =>{
     </div>
     <div className="featBlogPrev">
         {bloginfo.entry.slice(0,420)}
-        <Link to = '/blogDetail' state = {{title:bloginfo.title,entry:bloginfo.entry,date:bloginfo.date,id:bloginfo.id }}>...Read More</Link>
+        {/* <Link to = '/blogDetail' state = {{title:bloginfo.title,entry:bloginfo.entry,date:bloginfo.date,id:bloginfo.id }}>...Read More</Link> */}
     </div>
     <div className="featBlogLink">
 

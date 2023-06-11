@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 
@@ -12,6 +12,12 @@ import mini3 from '../imgs/mini3.png'
 import mePic2 from '../imgs/mePic2.png'
 
 const Blog = () => {
+    const [ showHideBlog, setShowHideBlog ] = useState(true)
+
+    const hideBlog = () => {
+      console.log('clicked for blog detail, hiding blog')
+      setShowHideBlog(false)
+    }
 
     const [ blogs, setBlogs ] = useState( [] )
 
@@ -28,6 +34,7 @@ useEffect( () => {
 console.log(blogs)
 let featureBlog = blogs[0]
 console.log(featureBlog)
+
 console.log(blogs)
 let miniFeatBlog=[]
 blogs.forEach(blog => {
@@ -54,11 +61,16 @@ console.log(miniFeatBlog)
  if (blogs.length ===0 ){
   return <div>Loading...</div>
  }
- 
+
+ if (!showHideBlog){
+  return null
+ }
+
 return (
   <div className="container">
     <div className="grid-item-1">
       <FeaturedBlog bloginfo = {featureBlog} />
+      <Link className = "featLink" onClick= {hideBlog} to = '/blogDetail' state = {{title:featureBlog.title,entry:featureBlog.entry,date:featureBlog.createdAt,id:featureBlog.id }}>...Read More</Link>
     </div>
     <div className="grid-item-2">
       {/* this will be the side bar */}

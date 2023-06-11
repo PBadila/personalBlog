@@ -1,4 +1,7 @@
-const BlogDetail = ( { title, entry, date, id }) => {
+import { useLocation, Link } from 'react-router-dom'
+const BlogDetail = (  ) => {
+    const location = useLocation()
+    const  { title, entry, date, id } = location.state
     console.log(title)
     console.log(entry)
     console.log(date)
@@ -52,15 +55,15 @@ const BlogDetail = ( { title, entry, date, id }) => {
     console.log(day)
     let revDate = month + " " + day + "," + year
     console.log(revDate)
-    if (id === 6 || id === 9 || id === 10 || id === 11) {
-        return null
-    }
+    // if (id === 6 || id === 9 || id === 10 || id === 11) {
+    //     return null
+    // }
     return(
       
-        <div>
-            <h1> {title} </h1>
-            <h3> {revDate} </h3>
-            <p> {entry} </p>
+        <div className="blogDetailContainer">
+            <h1 className="detailTitle"> {title} </h1>
+            <h3 className="detailDate"> {revDate} </h3> 
+            <p className="detailEntry"> {entry} </p>
         </div>
         
     )
