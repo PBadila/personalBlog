@@ -61,9 +61,9 @@ const BlogDetail = (  ) => {
     return(
       
         <div className="blogDetailContainer">
-            <h1> {title} </h1>
-            <h3> {revDate} </h3> 
-            <p> {entry} </p>
+            <h1 className="detailTitle"> {title} </h1>
+            <h3 className="detailDate"> {revDate} </h3> 
+            <p className="detailEntry"> {entry} </p>
         </div>
         
     )

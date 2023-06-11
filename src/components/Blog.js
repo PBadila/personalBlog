@@ -70,7 +70,7 @@ return (
   <div className="container">
     <div className="grid-item-1">
       <FeaturedBlog bloginfo = {featureBlog} />
-      <Link onClick= {hideBlog} to = '/blogDetail' state = {{title:featureBlog.title,entry:featureBlog.entry,date:featureBlog.createdAt,id:featureBlog.id }}>...Read More</Link>
+      <Link className = "featLink" onClick= {hideBlog} to = '/blogDetail' state = {{title:featureBlog.title,entry:featureBlog.entry,date:featureBlog.createdAt,id:featureBlog.id }}>...Read More</Link>
     </div>
     <div className="grid-item-2">
       {/* this will be the side bar */}
