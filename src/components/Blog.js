@@ -13,7 +13,7 @@ import mePic2 from '../imgs/mePic2.png'
 
 const Blog = () => {
     const [ showHideBlog, setShowHideBlog ] = useState(true)
-
+    console.log(showHideBlog)
     const hideBlog = () => {
       console.log('clicked for blog detail, hiding blog')
       setShowHideBlog(false)
@@ -90,6 +90,7 @@ return (
           <h3 className = "miniFeatTitle">{blog.title}</h3>
           <div className = "miniFeatDate">{blog.date}</div>
           <div className = "miniFeatEntry">{blog.entry.slice(0,200)}</div>
+          <Link className = "miniLink" onClick= {hideBlog} to = '/blogDetail' state = {{title:blog.title,entry:blog.entry,date:blog.createdAt,id:blog.id }}>...Read More</Link>
           </div>
        
       ))}
@@ -103,6 +104,7 @@ return (
             <div className = 'regDate'>{blog.createdAt}</div>
           </div>
           <div className = "regEntry">{blog.entry.slice(0,200)}</div>
+          <Link className = "regLink" onClick= {hideBlog} to = '/blogDetail' state = {{title:blog.title,entry:blog.entry,date:blog.createdAt,id:blog.id }}>...Read More</Link>
         </div>
        
       ))}

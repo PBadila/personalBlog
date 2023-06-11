@@ -188,6 +188,9 @@ border-radius:50%;
 
 /* Blog Detail start */
 .blogDetailContainer{
+  display:flex;
+  flex-direction:column;
+
 background-color:white;
 width:100%;
 height:100%;
@@ -204,5 +207,12 @@ font-size:1.5rem;
 .detailDate{
   color:#fd6085;
 
+}
+.exitDetail{
+  align-self: flex-end;
+  width:5%;
+}
+.exitBox{
+  width:20%;
 }
 /* Blog Detail stop */

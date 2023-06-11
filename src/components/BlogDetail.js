@@ -1,4 +1,5 @@
 import { useLocation, Link } from 'react-router-dom'
+import exit from '../imgs/exit3.png'
 const BlogDetail = (  ) => {
     const location = useLocation()
     const  { title, entry, date, id } = location.state
@@ -64,6 +65,9 @@ const BlogDetail = (  ) => {
             <h1 className="detailTitle"> {title} </h1>
             <h3 className="detailDate"> {revDate} </h3> 
             <p className="detailEntry"> {entry} </p>
+            <div classname="exitBox">
+                <Link to = '/blog' ><img class='exitDetail' src = {exit} /></Link>
+            </div>
         </div>
         
     )
