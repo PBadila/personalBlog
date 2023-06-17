@@ -1,5 +1,6 @@
 import { useLocation, Link } from 'react-router-dom'
 import exit from '../imgs/exit3.png'
+import ikigai from '../imgs/ikigai.jpg'
 const BlogDetail = (  ) => {
     const location = useLocation()
     const  { title, entry, date, id } = location.state
@@ -59,14 +60,21 @@ const BlogDetail = (  ) => {
     // if (id === 6 || id === 9 || id === 10 || id === 11) {
     //     return null
     // }
+
+    
     return(
       
         <div className="blogDetailContainer">
-            <h1 className="detailTitle"> {title} </h1>
-            <h3 className="detailDate"> {revDate} </h3> 
+            <div className="blogDetailImgBox">
+                {/* <img clasName="blogDetailImg" src={ikigai}/> */}
+            </div>
+            <div className="titleBox">
+                <h1 className="detailTitle"> {title} </h1>
+                <h3 className="detailDate"> {revDate} </h3> 
+            </div>
             <p className="detailEntry"> {entry} </p>
             <div classname="exitBox">
-                <Link to = '/blog' ><img class='exitDetail' src = {exit} /></Link>
+                <Link to = '/' ><img class='exitDetail' src = {exit} /></Link>
             </div>
         </div>
         

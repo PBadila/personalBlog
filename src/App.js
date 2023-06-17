@@ -28,16 +28,14 @@ function App() {
       </div>
       <Router>
        
-      {/* <Blog /> */}
-  
-      {/* <EnterBlog />  */}
+     
       <Routes>
-      
-        <Route path = '/blogDetail' element = {<BlogDetail />} />
-        <Route path = '/blog' element = {<Blog />} />
-        <Route path = '/enterBlog' element = {<EnterBlog />} />
+        
+        <Route path = '/blogdetail' element = {<BlogDetail />} />
+        <Route path = '/' element = {<Blog />} />
+        <Route path = '/enterblog' element = {<EnterBlog />} />
       </Routes> 
-      <Blog />
+      
       </Router>
     </div>
   );
