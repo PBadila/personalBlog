@@ -58,7 +58,7 @@ const UpdateBlog = () => {
            
         })
         console.log('should be cleared', blogUpdate)
-        //  navigate('/')
+         navigate('/')
     }
 
 
