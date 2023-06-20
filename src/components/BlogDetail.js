@@ -1,7 +1,9 @@
 import { useLocation, Link } from 'react-router-dom'
 
 import exit from '../imgs/exit3.png'
-import ikigai from '../imgs/ikigai.jpg'
+import ikigai from '../imgs/smallHeadPic/ikigai.jpg'
+import post15 from '../imgs/largePic/post15ss1.png'
+import smPic15 from '../imgs/smallHeadPic/smPic15.png'
 
 const BlogDetail = (  ) => {
     const location = useLocation()
@@ -66,6 +68,17 @@ const BlogDetail = (  ) => {
             case 6:
                 return ikigai
                 break
+            case 15:
+                return smPic15
+                break
+        }
+     }
+     const picBigSelect = (id) =>{
+        switch (id) {
+            
+            case 15:
+                return post15
+                break
         }
      }
 
@@ -82,6 +95,9 @@ const BlogDetail = (  ) => {
                     <img className="blogDetailImg" src={picSelect(id)}/> 
                 </div>
                 <p className="detailEntry"> {entry} </p>
+                <div className="bigBlogImg">
+                    <img className= "bigBlogImgs" src={picBigSelect(id)}/>
+                </div>
                 <div className="exitBox">
                     <Link to = '/' ><img className='exitDetail' src = {exit} /></Link>
                     <Link to ={`/updateblog/${id}`}><button className="updateBtn">Update</button></Link>

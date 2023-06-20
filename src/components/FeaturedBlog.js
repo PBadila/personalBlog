@@ -14,7 +14,9 @@ const FeaturedBlog = ( { bloginfo }) =>{
     <div className="featBlogPicBox">
       <img className="featPic" src = {Pic1} />
     </div>
+    
     <div className="featBlogPrev">
+    <h1>{bloginfo.title}</h1>
         {bloginfo.entry.slice(0,420)}
         
     </div>

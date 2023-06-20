@@ -8,6 +8,7 @@ import ImageUploading from 'react-images-uploading'
 import { useNavigate, Link } from 'react-router-dom'
 
 const EnterBlog = () => {
+  const navigate = useNavigate()
   const [ displayAddForm, setDisplayAddForm ] = useState('none')
   const [ errorDisplay, setErrorDisplay ] = useState('none')
     const [ loginDisplay, setLoginDisplay ] = useState('block')

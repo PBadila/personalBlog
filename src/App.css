@@ -248,11 +248,14 @@ background-color:black;
  
 }
 .blogDetailImgBox{
-   width:80%; 
+   width:70%; 
   
 }
+.bigBlogImgs{
+  width:100%;
+}
 .blogDetailImg{
-  width:50%;
+  width:80%;
 }
 .detailTitle{
   color:#a089e4;
@@ -389,4 +392,16 @@ background-color:black;
   .exitDetail{
     width:15%;
   }
+  .blogDetailImgBox{
+    width:100%; 
+   
+ }
+ .blogDetailImg{
+  width:100%;
+}
+.featureLittleBox{
+  margin-right:auto;
+  margin-left:auto;
+  margin-bottom:20px;
+}
 }
