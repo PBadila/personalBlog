@@ -115,21 +115,7 @@ const UpdateBlog = () => {
                         />
                     </Col>
                 </Form.Group>
-                <Form.Group as={Row} className="mb-3" controlId="formHorizonalTitle">
-                    <Form.Label column sm={2}>
-                        Topic
-                    </Form.Label>
-                    <Col sm={10}>
-                        <Form.Control 
-                        value ={blogUpdate.topic}
-                        name="topic"
-                        type="text" 
-                        placeholder="Topic(s) (separate with a comma)" 
-                        style={{width:'60%',height:'25px'}}
-                        onChange={handleChange2}
-                        />
-                    </Col>
-                </Form.Group>
+                
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>
