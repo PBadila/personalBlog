@@ -202,6 +202,7 @@ const UpdateBlog = () => {
                 </Form>
              <h1 style={{display:`${errorDisplay}`}}>Incorrect username and/or password. Try again or <Link to = '/'>return to blog.</Link></h1>
             </div>
+            <Link to ='/'><h2>Return to Blog</h2></Link>
         </div>
 
        
