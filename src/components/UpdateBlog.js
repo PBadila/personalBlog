@@ -4,31 +4,36 @@ import Row from 'react-bootstrap/Row'
 import Form from 'react-bootstrap/Form'
 
 import { useState,setState } from 'react'
+import { useParams,useNavigate } from 'react-router-dom'
 
 const UpdateBlog = () => {
+    const id = useParams()
+    const blogId = id.id
+    console.log('blogId',blogId)
+    const navigate = useNavigate()
 
     const [blogUpdate, setBlogUpdate] = useState({
-        title:'',
+        date:'',
         entry:'',
-        link:'',
-        topic:'',
-       
-      })
+        link:''
+       })
 
       const handleChange2 = (event) => {
-        setBlogInfo({...blogUpdate, [event.target.name]: event.target.value})
+        setBlogUpdate({...blogUpdate, [event.target.name]: event.target.value})
         
     }
 
     const handleSubmit2 = async (event) => {
         event.preventDefault();
         console.log(blogUpdate);
-        
-        // backToBlog()
+        console.log(id)
+        console.log(typeof(id))
+        const url = `https://blog-fbt9.onrender.com/journals/${blogId}`
+        console.log(url)
 
         try{
-            const response = await fetch('https://blog-fbt9.onrender.com/journals',{
-               method: 'PUT',
+            const response = await fetch(url,{
+               method: 'PATCH',
                headers: {
                 'Content-Type' : 'application/json',
                } ,
@@ -46,11 +51,12 @@ const UpdateBlog = () => {
             
         }
         setBlogUpdate({ 
-            title:'',
+            date:'',
             entry:'',  
-            link:'',
-            topic:'',
+            link:''
+           
         })
+         navigate('/')
     }
 
 
@@ -63,14 +69,14 @@ const UpdateBlog = () => {
             <Form onSubmit={handleSubmit2}>
                 <Form.Group as={Row} className="mb-3" controlId="formHorizonalTitle">
                     <Form.Label column sm={2}>
-                        Title
+                        Date
                     </Form.Label>
                     <Col sm={10}>
                         <Form.Control 
-                        value ={blogUpdate.title}
-                        name="title"
-                        type="text" 
-                        placeholder="Title" 
+                        value ={blogUpdate.date}
+                        name="date"
+                        type="date" 
+                        placeholder="Date" 
                         style={{width:'60%',height:'25px'}}
                         onChange={handleChange2}
                         />

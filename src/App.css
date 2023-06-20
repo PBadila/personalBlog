@@ -239,10 +239,21 @@ white-space:pre-line;
 }
 .exitDetail{
   align-self: flex-end;
-  width:5%;
+  width:80%;
 }
 .exitBox{
-  width:20%;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;
+  width:50%;
+  margin-left:auto;
+  margin-right:auto;
+  align-items: center;
+}
+
+.updateBtn{
+  width:60px;
+  height:30px;
 }
 /* Blog Detail stop */
 

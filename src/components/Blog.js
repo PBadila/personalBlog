@@ -72,7 +72,7 @@ return (
   <div className="container">
     <div className="grid-item-1">
       <FeaturedBlog bloginfo = {featureBlog} />
-      <Link className = "featLink" onClick= {hideBlog} to = '/blogDetail' state = {{title:featureBlog.title,entry:featureBlog.entry,date:featureBlog.createdAt,id:featureBlog.id }}>...Read More</Link>
+      <Link className = "featLink" onClick= {hideBlog} to = '/blogdetail' state = {{title:featureBlog.title,entry:featureBlog.entry,date:featureBlog.createdAt,id:featureBlog.id }}>...Read More</Link>
     </div>
     <div className="grid-item-2">
       {/* this will be the side bar */}
@@ -99,7 +99,7 @@ return (
           <h3 className = "miniFeatTitle">{blog.title}</h3>
           <div className = "miniFeatDate">{blog.date}</div>
           <div className = "miniFeatEntry">{blog.entry.slice(0,200)}</div>
-          <Link className = "miniLink" onClick= {hideBlog} to = '/blogDetail' state = {{title:blog.title,entry:blog.entry,date:blog.createdAt,id:blog.id }}>...Read More</Link>
+          <Link className = "miniLink" onClick= {hideBlog} to = '/blogdetail' state = {{title:blog.title,entry:blog.entry,date:blog.createdAt,id:blog.id }}>...Read More</Link>
           </div>
        
       ))}
@@ -113,7 +113,7 @@ return (
             <div className = 'regDate'>{blog.createdAt}</div>
           </div>
           <div className = "regEntry">{blog.entry.slice(0,200)}</div>
-          <Link className = "regLink" onClick= {hideBlog} to = '/blogDetail' state = {{title:blog.title,entry:blog.entry,date:blog.createdAt,id:blog.id }}>...Read More</Link>
+          <Link className = "regLink" onClick= {hideBlog} to = '/blogdetail' state = {{title:blog.title,entry:blog.entry,date:blog.createdAt,id:blog.id }}>...Read More</Link>
         </div>
        
       ))}

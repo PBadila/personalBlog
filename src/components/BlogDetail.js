@@ -73,8 +73,9 @@ const BlogDetail = (  ) => {
                 <h3 className="detailDate"> {revDate} </h3> 
             </div>
             <p className="detailEntry"> {entry} </p>
-            <div classname="exitBox">
-                <Link to = '/' ><img class='exitDetail' src = {exit} /></Link>
+            <div className="exitBox">
+                <Link to = '/' ><img className='exitDetail' src = {exit} /></Link>
+                <Link to ={`/updateblog/${id}`}><button className="updateBtn">Update</button></Link>
             </div>
         </div>
         

@@ -7,6 +7,7 @@ import Blog from './components/Blog'
 import BlogDetail from './components/BlogDetail'
 import Photo from './components/Photo'
 import EnterBlog from './components/EnterBlog'
+import UpdateBlog from './components/UpdateBlog'
 
 
 import oro from './imgs/orobouros.png'
@@ -34,6 +35,7 @@ function App() {
         <Route path = '/blogdetail' element = {<BlogDetail />} />
         <Route path = '/' element = {<Blog />} />
         <Route path = '/enterblog' element = {<EnterBlog />} />
+        <Route path = '/updateblog/:id' element = {<UpdateBlog />} />
       </Routes> 
       
       </Router>
