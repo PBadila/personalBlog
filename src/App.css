@@ -80,6 +80,22 @@
   'main main main side-bar'
   'main main main side-bar';
 }
+.featureLittleBox{
+  display:flex;
+  flex-direction:column;
+  /* justify-content:center; */
+  width:50%;
+  position:relative;
+  margin-left:40%
+
+}
+.addBlog{
+  /* width:20%; */
+  background-color:#fd6085;
+  color:white;
+  border-radius:50px;
+  font-size:1.5rem;
+}
 .grid-item-1{
   grid-area:feature;
   /* background-color:green; */
