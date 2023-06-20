@@ -80,6 +80,22 @@
   'main main main side-bar'
   'main main main side-bar';
 }
+.featureLittleBox{
+  display:flex;
+  flex-direction:column;
+  /* justify-content:center; */
+  width:50%;
+  position:relative;
+  margin-left:40%
+
+}
+.addBlog{
+  /* width:20%; */
+  background-color:#fd6085;
+  color:white;
+  border-radius:50px;
+  font-size:1.5rem;
+}
 .grid-item-1{
   grid-area:feature;
   /* background-color:green; */
@@ -212,6 +228,8 @@ border-radius:50%;
 width:100%;
 height:100%;
 background-color:black;
+
+
 }
 .detailHolder{
   display:flex;
@@ -219,7 +237,6 @@ background-color:black;
   justify-content: center;
   align-items: center;
   width:80%;
-  height:100%;
   white-space:pre-line;
   margin-left:auto;
   margin-right:auto;
@@ -227,6 +244,8 @@ background-color:black;
   white-space:pre-line;
   background-color:white;
   border:#7befe5 10px solid;
+ 
+ 
 }
 .blogDetailImgBox{
    width:80%; 

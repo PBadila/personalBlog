@@ -5,9 +5,18 @@ import Form from 'react-bootstrap/Form'
 
 import { useState,setState } from 'react'
 import ImageUploading from 'react-images-uploading'
-// import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 const EnterBlog = () => {
+  const [ displayAddForm, setDisplayAddForm ] = useState('none')
+  const [ errorDisplay, setErrorDisplay ] = useState('none')
+    const [ loginDisplay, setLoginDisplay ] = useState('block')
+    const [ loginInfo, setLoginInfo ] = useState({
+        username:'',
+        password:''
+    })
+    const storedPassword = process.env.REACT_APP_PASSWORD
+    const storedUsername = process.env.REACT_APP_USERNAME
 
     const [blogInfo, setBlogInfo] = useState({
         title:'',
@@ -36,8 +45,7 @@ const EnterBlog = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         console.log(blogInfo);
-        
-        // backToBlog()
+      
 
         try{
             const response = await fetch('https://blog-fbt9.onrender.com/journals',{
@@ -66,13 +74,34 @@ const EnterBlog = () => {
         })
     }
 
-    
+  const handleChange3 = (event) => {
+      setLoginInfo({...loginInfo, [event.target.name]: event.target.value})
+      
+  } 
 
+  const handleSubmit3 = async (event) => {
+    event.preventDefault();
+   
+   
+    if(loginInfo.username == storedUsername && loginInfo.password ==storedPassword){
+        setDisplayAddForm('block')
+        setLoginDisplay('none')
+    } else{
 
+        setErrorDisplay('block')
+        setLoginInfo({ 
+            username:'',
+            password:'', 
+        })
+
+        
+    }
+}
 
 
     return(
-        <div>
+      <div>
+        <div style={{display:`${displayAddForm}`}}>
             <h1>Add a Blog</h1>
             <Form onSubmit={handleSubmit}>
                 <Form.Group as={Row} className="mb-3" controlId="formHorizonalTitle">
@@ -142,57 +171,48 @@ const EnterBlog = () => {
                     Submit
                 </Button>
             </Form>
-            {/* <div>
-            <div className="App"><ImageUploading
-        multiple
-        value={images}
-        onChange={onChange}
-        maxNumber={maxNumber}
-        dataURLKey="data_url"
-      >
-        {({
-          imageList,
-          onImageUpload,
-          onImageRemoveAll,
-          onImageUpdate,
-          onImageRemove,
-          isDragging,
-          dragProps,
-        }) => (
-          // UI
-          <div className="upload__image-wrapper">
-            <button
-              style={isDragging ? { color: 'red' } : undefined}
-              onClick={onImageUpload}
-              {...dragProps}
-            >
-              Click or Drop here
-            </button>
-            &nbsp;
-            <button onClick={onImageRemoveAll}>Remove all images</button>
-            {imageList.map((image, index) => (
-              <div key={index} className="image-item">
-                <img src={image['data_url']} alt="" width="100" />
-                <div className="image-item__btn-wrapper">
-                  <button onClick={() => onImageUpdate(index)}>Update</button>
-                  <button onClick={() => onImageRemove(index)}>Remove</button>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </ImageUploading>
-    </div> */}
-          </div>
-    //         {({ imageList, onImageUpload, onImageRemoveAll, errors }) => (
-    // errors && <div>
-    //   {errors.maxNumber && <span>Number of selected image exceed maxNumber</span>}
-    //   {errors.acceptType && <span>Your selected file type is not allow</span>}
-    //   {errors.maxFileSize && <span>Selected file size exceed maxFileSize</span>}
-    //   {errors.resolution && <span>Selected file is not match your desired resolution</span>}
-    // </div>
-  // )}
-        // </div>
+         </div>
+         <div style={{display: `${loginDisplay}`}}>
+            <h1>Enter Administrative Login</h1>
+                <Form onSubmit={handleSubmit3}>
+                    <Form.Group as={Row} className="mb-3" controlId="formHorizonalTitle">
+                        <Form.Label column sm={2}>
+                            username
+                        </Form.Label>
+                        <Col sm={10}>
+                            <Form.Control 
+                            value ={loginInfo.username}
+                            name="username"
+                            type="text" 
+                            placeholder="Username" 
+                            style={{width:'30%',height:'25px'}}
+                            onChange={handleChange3}
+                            />
+                        </Col>
+                    </Form.Group>
+                    <Form.Group as={Row} className="mb-3" controlId="formHorizonalTitle">
+                        <Form.Label column sm={2}>
+                            password
+                        </Form.Label>
+                        <Col sm={10}>
+                            <Form.Control 
+                            value ={loginInfo.password}
+                            name="password"
+                            type="text" 
+                            placeholder="Password" 
+                            style={{width:'30%',height:'25px'}}
+                            onChange={handleChange3}
+                            />
+                        </Col>
+                    </Form.Group>
+                    <Button variant="primary" type="submit">
+                        Submit
+                    </Button>
+                </Form>
+             <h1 style={{display:`${errorDisplay}`}}>Incorrect username and/or password. Try again or <Link to = '/'>return to blog.</Link></h1>
+            </div>
+      </div>
+  
     )
 }
 export default EnterBlog
