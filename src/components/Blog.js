@@ -106,17 +106,21 @@ return (
     </div>
     <div className="grid-item-4 reg" >
       
-      {blogs.map(blog => (
-        <div className = "regBlogList">
-          <div className = "regTitleBox">
-            <h4 className = 'regTitle'>{blog.title}</h4>
-            <div className = 'regDate'>{blog.createdAt}</div>
+      {blogs.map(blog => {
+      if (blog.id !== 6 && blog.id !== 9 && blog.id !== 10 && blog.id !== 11) {
+        return(
+          <div className = "regBlogList" key={blog.id}>
+            <div className = "regTitleBox">
+              <h4 className = 'regTitle'>{blog.title}</h4>
+              <div className = 'regDate'>{blog.createdAt}</div>
+            </div>
+            <div className = "regEntry">{blog.entry.slice(0,200)}</div>
+            <Link className = "regLink" onClick= {hideBlog} to = '/blogdetail' state = {{title:blog.title,entry:blog.entry,date:blog.createdAt,id:blog.id }}>...Read More</Link>
           </div>
-          <div className = "regEntry">{blog.entry.slice(0,200)}</div>
-          <Link className = "regLink" onClick= {hideBlog} to = '/blogdetail' state = {{title:blog.title,entry:blog.entry,date:blog.createdAt,id:blog.id }}>...Read More</Link>
-        </div>
-       
-      ))}
+        )
+      }
+      return null
+    })}
     </div>
   </div>
 );
