@@ -30,6 +30,7 @@ const UpdateBlog = () => {
         console.log(typeof(id))
         const url = `https://blog-fbt9.onrender.com/journals/${blogId}`
         console.log(url)
+        console.log('the update entry',blogUpdate.entry)
 
         try{
             const response = await fetch(url,{
@@ -56,7 +57,8 @@ const UpdateBlog = () => {
             link:''
            
         })
-         navigate('/')
+        console.log('should be cleared', blogUpdate)
+        //  navigate('/')
     }
 
 
