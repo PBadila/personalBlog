@@ -13,6 +13,8 @@ import UpdateBlog from './components/UpdateBlog'
 import oro from './imgs/orobouros.png'
 import comp from './imgs/computerScience.png'
 
+// require('dotenv').config()
+
 function App() {
 
   
