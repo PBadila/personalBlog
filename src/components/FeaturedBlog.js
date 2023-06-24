@@ -17,7 +17,7 @@ const FeaturedBlog = ( { bloginfo }) =>{
     
     <div className="featBlogPrev">
     <h1>{bloginfo.title}</h1>
-        {bloginfo.entry.slice(0,420)}
+        {bloginfo.entry.slice(26,420)}
         
     </div>
     <div className="featBlogLink">
