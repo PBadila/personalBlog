@@ -423,4 +423,15 @@ background-color:black;
   align-self: flex-end;
   width:85%;
 }
+.titleBox{
+  background-color:black;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-end;
+  border:#7befe5 10px solid;
+  margin-bottom:25px;
+  border-radius:5px;
+}
 }
