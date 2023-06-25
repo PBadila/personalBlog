@@ -115,7 +115,7 @@ return (
           <div className = "regBlogList" key={blog.id}>
             <div className = "regTitleBox">
               <h4 className = 'regTitle'>{blog.title}</h4>
-              <div className = 'regDate'>{blog.createdAt}</div>
+              <div className = 'regDate'>{blog.createdAt.slice(0,10)}</div>
             </div>
             <div className = "regEntry">{blog.entry.slice(0,200)}</div>
             <Link className = "regLink" onClick= {hideBlog} to = '/blogdetail' state = {{title:blog.title,entry:blog.entry,date:blog.createdAt,id:blog.id }}>...Read More</Link>
