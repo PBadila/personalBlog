@@ -26,13 +26,13 @@ const EnterBlog = () => {
         topic:'',
        
       })
-      const [ images, setImages ] = useState([])
-      const maxNumber  = 10
+    //   const [ images, setImages ] = useState([])
+    //   const maxNumber  = 10
 
-      const onChange = ( imageList, addUpdateIndex ) => {
-        console.log(imageList, addUpdateIndex)
-        setImages(imageList)
-      }
+    //   const onChange = ( imageList, addUpdateIndex ) => {
+    //     console.log(imageList, addUpdateIndex)
+    //     setImages(imageList)
+    //   }
       
       
       

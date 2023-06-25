@@ -4,6 +4,7 @@ import exit from '../imgs/exit3.png'
 import ikigai from '../imgs/smallHeadPic/ikigai.jpg'
 import post15 from '../imgs/largePic/post15ss1.png'
 import smPic15 from '../imgs/smallHeadPic/smPic15.png'
+import authentication from '../imgs/authentication.png'
 
 const BlogDetail = (  ) => {
     const location = useLocation()
@@ -78,6 +79,9 @@ const BlogDetail = (  ) => {
             
             case 15:
                 return post15
+                break
+            case 18:
+                return authentication
                 break
         }
      }
