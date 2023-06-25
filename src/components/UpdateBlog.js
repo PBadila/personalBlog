@@ -196,13 +196,13 @@ const UpdateBlog = () => {
                             />
                         </Col>
                     </Form.Group>
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" type="submit" className='subBtn'>
                         Submit
                     </Button>
                 </Form>
-             <h1 style={{display:`${errorDisplay}`}}>Incorrect username and/or password. Try again or <Link to = '/'>return to blog.</Link></h1>
+             <h1 className="errorMsg" style={{display:`${errorDisplay}`}}>Incorrect username and/or password. Try again.</h1>
             </div>
-            <Link to ='/'><h2>Return to Blog</h2></Link>
+            <Link to ='/' className="return"><h2 className="return">Return to Blog</h2></Link>
         </div>
 
        

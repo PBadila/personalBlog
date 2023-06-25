@@ -193,6 +193,12 @@ border-radius:50%;
   left:15%; */
   margin-right:13%;
 }
+.loading{
+  margin-top:10%;
+  color:white;
+  font-size:2rem;
+}
+
 /* Blog stop */
 
 
@@ -311,6 +317,36 @@ background-color:black;
  
 }
 /* Blog Detail stop */
+
+/* Update start   */
+/* .return h2 a:link{
+  color:#7befe5 !important;
+}
+.return h2 a:visited{
+  color:#7befe5 !important;
+}
+.return h2 a:hover{
+  color:#7befe5 !important;
+}
+.return h2 a:active{
+  color:#7befe5 !important;
+} */
+.return{
+  color:#7befe5;
+}
+.subBtn{
+  background-color:#a089e4;
+  color:white;
+  border-radius:25px;
+  margin-top:20px;
+  font-size:1.3rem;
+  padding:11px;
+}
+.errorMsg{
+  color:white;
+  font-size:1.3rem;
+}
+/* Update stop  */
 
 /* Media Queries */
 @media(max-width: 1399px){

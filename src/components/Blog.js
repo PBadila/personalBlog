@@ -61,7 +61,7 @@ console.log(miniFeatBlog)
  }  
  //Conditional rendering
  if (blogs.length ===0 ){
-  return <div>Loading...</div>
+  return <div className="loading">Loading...</div>
  }
 
  if (!showHideBlog){
