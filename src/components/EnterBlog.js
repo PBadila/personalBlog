@@ -95,7 +95,7 @@ const EnterBlog = () => {
             password:'', 
         })
 
-        navigate('/')    
+          
     }
 }
 
